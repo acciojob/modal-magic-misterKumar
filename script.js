@@ -1,14 +1,17 @@
-//your JS code here. If required.
-document.getElementById("openModalBtn").addEventListener("click", function() {
-  document.getElementById("modal").style.display = "block";
+var modal = document.getElementById("modal");
+var openModalBtn = document.getElementById("openModal");
+var closeModalBtn = document.querySelector(".close-modal");
+
+openModalBtn.addEventListener("click", function() {
+  modal.style.display = "block";
 });
 
-document.getElementById("closeModalBtn").addEventListener("click", function() {
-  document.getElementById("modal").style.display = "none";
+closeModalBtn.addEventListener("click", function() {
+  modal.style.display = "none";
 });
 
 window.addEventListener("click", function(event) {
-  if (event.target == document.getElementById("modal")) {
-    document.getElementById("modal").style.display = "none";
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
 });

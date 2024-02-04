@@ -1,17 +1,13 @@
-/*  your css code here. If applicable */
-h2{
-	background-color:green;
-	color:white;
-}
 .modal {
   display: none;
   position: fixed;
   z-index: 9999;
-  top: 0;
   left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
@@ -19,14 +15,14 @@ h2{
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 300px;
+  width: 80%;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 .modal-header h2 {
@@ -34,10 +30,22 @@ h2{
 }
 
 .modal-body {
-  margin: 0;
-	
+  margin-top: 20px;
 }
 
-button {
+.modal-content p {
+  margin: 0;
+}
+
+.close-modal {
+  background-color: transparent;
+  border: none;
+  color: #888;
+  font-size: 18px;
   cursor: pointer;
+}
+
+.close-modal:focus,
+#openModal:focus {
+  outline: none;
 }
